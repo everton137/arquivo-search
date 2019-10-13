@@ -16,7 +16,7 @@ export default class Search extends Component {
     getInfo = () => {
         axios.get(`${API_URL}?content=ilike.*${this.state.query}*`)
             .then(({data}) => {
-                console.log(data)
+                // console.log(data)
                 this.setState({
                     results: data
                 })
@@ -36,8 +36,6 @@ export default class Search extends Component {
             }
         });
     }
-    // http://localhost:3001/tweets?content=ilike.*trump*
-
     
     render() {
         return(
