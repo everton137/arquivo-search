@@ -14,7 +14,7 @@ export default class Search extends Component {
     }
 
     getInfo = () => {
-        axios.get(`${API_URL}?content=ilike.*${this.state.query}*`)
+        axios.get(`${API_URL}?content=ilike.*${this.state.query}*&order=time.desc`)
             .then(({data}) => {
                 // console.log(data)
                 this.setState({
