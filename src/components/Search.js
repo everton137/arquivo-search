@@ -46,7 +46,7 @@ export default class Search extends Component {
                     onChange={this.handleInputChange}
                 />
                 <p>Resultados: {this.state.results.length}</p>
-                <Suggestions results={this.state.results} /> 
+                <Suggestions results={this.state.results} query={this.state.query} /> 
             </form>
         );
     }
